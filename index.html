@@ -58,6 +58,17 @@
     </div>
 
     <script>
+        // Bloquear acesso ao código-fonte
+        document.addEventListener("contextmenu", (event) => event.preventDefault());
+        document.addEventListener("keydown", (event) => {
+            if (event.ctrlKey && (event.key === "u" || event.key === "U")) {
+                event.preventDefault();
+            }
+            if (event.key === "F12") {
+                event.preventDefault();
+            }
+        });
+
         // Lista de CPFs válidos
         const cpfsValidos = [
             "50629697787",
